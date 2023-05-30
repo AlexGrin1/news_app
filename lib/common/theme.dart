@@ -1,12 +1,35 @@
 import 'package:news_app/imports.dart';
 
-final ThemeData newsAppTheme = ThemeData(
-  fontFamily: 'Roboto',
-  textTheme: const TextTheme(
-    displayLarge: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-    titleLarge: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-    bodyMedium: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-  ),
-  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
-      .copyWith(secondary: Colors.orange),
-);
+import 'package:flutter/material.dart';
+
+NewsAppTheme newsAppTheme = NewsAppTheme();
+
+class NewsAppTheme {
+  AppTypography typography = AppTypography();
+  AppColors appColors = AppColors();
+}
+
+class AppColors {
+  Color highlighting = const Color.fromARGB(255, 0, 202, 192);
+  Color light = const Color(0xffffffff);
+  Color dark = const Color.fromARGB(255, 48, 48, 48);
+  Color background = const Color.fromARGB(255, 65, 65, 65);
+}
+
+class AppTypography {
+  TextStyle regular24 = const TextStyle(
+    color: Colors.white,
+    fontFamily: "Roboto-Regular",
+    fontSize: 24.0,
+  );
+  TextStyle regular14 = const TextStyle(
+    color: Colors.white,
+    fontFamily: "Roboto-Regular",
+    fontSize: 14,
+  );
+  TextStyle semibold16 = const TextStyle(
+    color: Colors.white,
+    fontFamily: "Roboto-Bold",
+    fontSize: 16,
+  );
+}
