@@ -9,10 +9,15 @@ class NewsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'News App',
-      theme: newsAppTheme,
-      home: const Placeholder(),
+    return MultiBlocProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => PageControllProvider()),
+      ],
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'News App',
+        home: HomeScreen(),
+      ),
     );
   }
 }
