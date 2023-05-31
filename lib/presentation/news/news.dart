@@ -37,7 +37,7 @@ class _NewsScreenState extends State<NewsScreen> with TickerProviderStateMixin {
                 : const Text('Everything'),
             centerTitle: true,
             bottom: TabBar(
-              controller: tabController,
+              // controller: tabController,
               indicatorColor: newsAppTheme.appColors.highlighting,
               tabs: const [
                 Tab(icon: Icon(Icons.list_alt_outlined)),
@@ -45,7 +45,7 @@ class _NewsScreenState extends State<NewsScreen> with TickerProviderStateMixin {
               ],
             ),
           ),
-          body: const TabBarView(
+          body: TabBarView(
             children: [
               TopHeadlinesNewsScreen(),
               EverythingNewsScreen(),
@@ -56,4 +56,3 @@ class _NewsScreenState extends State<NewsScreen> with TickerProviderStateMixin {
     );
   }
 }
-// /(Top Headlines и Everything)
