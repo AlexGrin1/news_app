@@ -1,6 +1,9 @@
 import 'package:news_app/imports.dart';
+import 'package:news_app/logic/bloc/favourites_cubit.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  localData.initializeLocalData();
   runApp(const NewsApp());
 }
 
@@ -12,8 +15,11 @@ class NewsApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => PageControllProvider()),
+        BlocProvider(
+          create: (context) => FavoriteNewsCubit(),
+        ),
       ],
-      child: const MaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'News App',
         home: HomeScreen(),
