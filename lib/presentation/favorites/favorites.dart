@@ -1,6 +1,3 @@
-import 'dart:convert';
-import 'dart:developer';
-
 import 'package:news_app/imports.dart';
 
 // class FavouritesScreen extends StatelessWidget {
@@ -73,7 +70,7 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
                       style: newsAppTheme.typography.newsTitle,
                     ),
                   )
-            : LoadingWidget(),
+            : const LoadingWidget(),
       ),
     );
   }

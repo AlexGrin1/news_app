@@ -10,7 +10,7 @@ class EverythingNewsScreen extends StatefulWidget {
 
 class _EverythingNewsScreenState extends State<EverythingNewsScreen> {
   late Future<News?> _loadData;
-  ScrollController _scrollController = ScrollController();
+  final ScrollController _scrollController = ScrollController();
   int _currentPage = 1;
   int _totalPages = 1;
   List<Article> _articles = [];
@@ -66,7 +66,6 @@ class _EverythingNewsScreenState extends State<EverythingNewsScreen> {
         child: FutureBuilder<News?>(
           future: _loadData,
           builder: (BuildContext context, AsyncSnapshot snapshot) {
-            News? news = snapshot.data;
             return RefreshIndicator(
               backgroundColor: newsAppTheme.appColors.background,
               color: newsAppTheme.appColors.highlighting,

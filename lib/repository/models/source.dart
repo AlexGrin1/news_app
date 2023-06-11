@@ -1,7 +1,5 @@
 import 'dart:convert';
 
-import 'package:news_app/imports.dart';
-
 class Source {
   String? id;
   String name;

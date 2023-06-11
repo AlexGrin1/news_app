@@ -35,7 +35,7 @@ class AppTypography {
     fontSize: 16.0,
   );
   TextStyle newsDesciption = TextStyle(
-    color: Color(0xffffffff).withOpacity(0.5),
+    color: const Color(0xffffffff).withOpacity(0.5),
     fontFamily: "Roboto-Regular",
     fontSize: 14.0,
   );

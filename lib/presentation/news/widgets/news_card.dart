@@ -59,7 +59,7 @@ class _NewsCardWidgetState extends State<NewsCardWidget> {
                       maxLines: 10,
                       style: newsAppTheme.typography.newsTitle,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Text(
@@ -68,7 +68,7 @@ class _NewsCardWidgetState extends State<NewsCardWidget> {
                       overflow: TextOverflow.ellipsis,
                       style: newsAppTheme.typography.newsDesciption,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Text(

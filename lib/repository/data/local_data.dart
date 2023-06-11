@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
-import "package:flutter/foundation.dart";
 import 'package:news_app/repository/models/article.dart';
 import "package:path_provider/path_provider.dart";
 import 'package:hive/hive.dart';
@@ -15,7 +14,7 @@ class LocalData {
   }
 
   Future<List<Article>> getLocalData() async {
-    var data = await storage.values;
+    var data = storage.values;
     log('data $data');
     return List.from(data)
         .map((e) => Article.fromJson(json.decode(e)))

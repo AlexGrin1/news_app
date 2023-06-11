@@ -45,7 +45,7 @@ class _NewsScreenState extends State<NewsScreen> with TickerProviderStateMixin {
               ],
             ),
           ),
-          body: TabBarView(
+          body: const TabBarView(
             children: [
               TopHeadlinesNewsScreen(),
               EverythingNewsScreen(),

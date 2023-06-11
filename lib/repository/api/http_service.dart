@@ -14,7 +14,7 @@ class ApiResponse<T> {
 
 class NewsApi {
   final String baseUrl = 'https://newsapi.org/v2';
-  final String _api_key =
+  final String _apiKey =
       '0fb0db55b74e4efa81ce182d12de2a6e'; //'38823f356abb4c6d9fa19f68dd78b40b';
   final String country = 'us';
   final String questionRequest = 'apple';
@@ -36,14 +36,14 @@ class NewsApi {
 
   Future<ApiResponse> getEverythingNews({required int page}) async {
     String url =
-        "$baseUrl/everything?q=$questionRequest&page=$page&pageSize=$pageSize&apiKey=$_api_key";
+        "$baseUrl/everything?q=$questionRequest&page=$page&pageSize=$pageSize&apiKey=$_apiKey";
 
     ApiResponse response = await getRequest(url: url);
     return ApiResponse.fromJson(response.statusCode, response.body);
   }
 
   Future<ApiResponse> getTopHeadlinesNews({required int page}) async {
-    String url = "$baseUrl/top-headlines?country=$country&apiKey=$_api_key";
+    String url = "$baseUrl/top-headlines?country=$country&apiKey=$_apiKey";
 
     ApiResponse response = await getRequest(url: url);
     return ApiResponse.fromJson(response.statusCode, response.body);

@@ -19,7 +19,7 @@ class NewsApp extends StatelessWidget {
           create: (context) => FavoriteNewsCubit(),
         ),
       ],
-      child: MaterialApp(
+      child: const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'News App',
         home: HomeScreen(),

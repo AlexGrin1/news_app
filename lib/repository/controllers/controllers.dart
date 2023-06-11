@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:news_app/imports.dart';
 
 class Controller {
@@ -8,6 +6,7 @@ class Controller {
     if (response.statusCode == 200) {
       return News.fromJson(response.body);
     }
+    return null;
   }
 
   Future<News?> getEverythingNews({required int page}) async {

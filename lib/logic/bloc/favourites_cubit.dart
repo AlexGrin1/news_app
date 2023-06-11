@@ -10,13 +10,15 @@ class FavoriteNewsCubit extends Cubit<FavoritesState> {
 
   FavoriteNewsCubit({this.isFavorites = false})
       : super(const FavoritesInitial()) {
-    isFavorites ? emit(FavoritesActiveState()) : emit(FavoritesInactiveState());
+    isFavorites
+        ? emit(const FavoritesActiveState())
+        : emit(const FavoritesInactiveState());
   }
 
   void removeFromFavourites({required Article article}) async {
     localData.removeFromStorage(key: article.title);
 
-    emit(FavoritesInactiveState());
+    emit(const FavoritesInactiveState());
   }
 
   void addToFavourites({required Article article}) async {
